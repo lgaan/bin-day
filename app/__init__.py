@@ -39,6 +39,3 @@ def next_week():
         return render_template("main.html", day="Recycling", date=str(datetime.strptime("2019-07-24", r"%Y-%m-%d")).split(".")[0], week="Next")
     else:
         return render_template("main.html", day="General Waste", date=str(datetime.strptime("2019-07-24", r"%Y-%m-%d")).split(".")[0], week="Next")
-
-if __name__ == "__main__":
-    app.run(debug=True)
