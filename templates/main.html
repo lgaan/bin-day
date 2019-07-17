@@ -1,0 +1,25 @@
+<html>
+
+<header>
+    <title>Bin Day</title>
+    <link rel="stylesheet" href="../static/main.css">
+</header>
+
+<body>
+    <div id="nav">
+        {% if week == "This" %}
+            <button onclick="window.location.href = '/next'" id="next">Next Week</button>
+        {% else %}
+        <button onclick="window.location.href = '/'" id="this">This Week</button>
+        {% endif %}
+    </div>
+
+    <div id="container">
+        <h3 id="text-top">{{week}} week is</h3>
+        <h2 id="day">{{day}}</h2>
+        <h3 id="text-bottom">week.</h3>
+        <h3 id="date">{{date}}</h3>
+    </div>
+</body>
+
+</html>
