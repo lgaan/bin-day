@@ -11,7 +11,7 @@ def index_():
 
     if day != 3:
         if day > 3:
-            next_bin_day = (date.day)+(day-3)+6
+            next_bin_day = (date.day+1)+(day-3)+6
             if (next_bin_day%2) != 0:
                 return render_template("main.html", day="Recycling", date=str(next_bin_day).split(".")[0], week="Next")
             else:
