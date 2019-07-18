@@ -13,15 +13,15 @@ def index_():
         if day > 3:
             next_bin_day = (date.day)+(day-3)+6
             if (next_bin_day%2) != 0:
-                return render_template("main.html", day="Recycling", date=str(date).split(".")[0], week="Next")
+                return render_template("main.html", day="Recycling", date=str(next_bin_day).split(".")[0], week="Next")
             else:
-                return render_template("main.html", day="General Waste", date=str(date).split(".")[0], week="Next")
+                return render_template("main.html", day="General Waste", date=str(next_bin_day).split(".")[0], week="Next")
         else:
             bin_day = (date.day)+(3-day-1)
             if (bin_day%2) != 0:
-                return render_template("main.html", day="Recycling", date=str(date).split(".")[0], week="This")
+                return render_template("main.html", day="Recycling", date=str(bin_day).split(".")[0], week="This")
             else:
-                return render_template("main.html", day="General Waste", date=str(date).split(".")[0], week="This")
+                return render_template("main.html", day="General Waste", date=str(bin_day).split(".")[0], week="This")
     else:
         if (date.day%2) != 0:
            return render_template("main.html", day="Recycling", date=str(date).split(".")[0], week="This")
