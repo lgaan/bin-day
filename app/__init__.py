@@ -15,9 +15,9 @@ def index_():
             amount_days = ((day-3)+6)-1
             next_date = date + timedelta(days=amount_days)
             if (next_bin_day%2) != 0:
-                return render_template("main.html", day="Recycling", date=str(next_date).split(".")[0], week="Next")
+                return render_template("main.html", day="Recycling", date=str(next_date).split(".")[0], week="This")
             else:
-                return render_template("main.html", day="General Waste", date=str(next_date).split(".")[0], week="Next")
+                return render_template("main.html", day="General Waste", date=str(next_date).split(".")[0], week="This")
         else:
             bin_day = (date.day)+(3-day-1)
             if (bin_day%2) != 0:
