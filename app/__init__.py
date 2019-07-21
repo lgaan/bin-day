@@ -16,10 +16,10 @@ def index_():
             next_date = date + timedelta(days=amount_days)
             if (next_bin_day%2) != 0:
                 #return render_template("main.html", day="Recycling", date=str(next_date).split(".")[0], week="Next")
-                return redirect(url_for("/next"), day="Recycling", date=str(next_date).split(".")[0], week="Next")
+                return redirect(url_for("next_week"), day="Recycling", date=str(next_date).split(".")[0], week="Next")
             else:
                 #return render_template("main.html", day="General Waste", date=str(next_date).split(".")[0], week="Next")
-                return redirect(url_for("/next"), day="General Waste", date=str(next_date).split(".")[0], week="Next")
+                return redirect(url_for("next_week"), day="General Waste", date=str(next_date).split(".")[0], week="Next")
         else:
             bin_day = (date.day)+(3-day-1)
             if (bin_day%2) != 0:
